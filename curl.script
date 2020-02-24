@@ -1,0 +1,19 @@
+curl -H "Content-Type: application/json" --request POST  -d '{"id":"0","accountName":"Test Account","title":"First Account","balance":"100.00"}'  http://localhost:8080/api/account
+curl -H "Content-Type: application/json" --request POST  -d '{"id":"0","accountName":"Test Account","title":"First Account","balance":"100.00"}'  http://localhost:8080/api/account
+
+curl http://localhost:8080/api/account/1
+curl http://localhost:8080/api/account/2
+
+curl -H "Content-Type: application/json" --request GET   http://localhost:8080/api/account/transfer/1/2/50.50
+
+curl http://localhost:8080/api/account/1
+curl http://localhost:8080/api/account/2
+
+curl -H "Content-Type: application/json" --request GET   http://localhost:8080/api/account/transfer/1/2/50.50
+curl -H "Content-Type: application/json" --request GET   http://localhost:8080/api/account/transfer/1/2/-50.50
+curl -H "Content-Type: application/json" --request GET   http://localhost:8080/api/account/transfer/1/12/50.50
+curl -H "Content-Type: application/json" --request GET   http://localhost:8080/api/account/transfer/12/2/50.50
+curl http://localhost:8080/api/account/1
+curl http://localhost:8080/api/account/2
+
+
